@@ -4,121 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>tripadvisor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery.js"></script>
+    
 </head>
 <body>
-    <section class="home">
-        <header>
-            <div>
-                <nav>
-                    <a class="logo-a"><img class="logo" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="tripadvisor"></a>
-                    <div class="search-box">
-                         <img class="search-icon" src="img/search-icon.svg" alt="search">
-                         <form action="">
-                            <input class="search-input" type="search" name="" id="" >
-                         </form>
+       <header>
+            <div class="container-fluid p-2">
+                <nav class="row">
+                    <a class="col-3"><img width="200px" class="logo" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="tripadvisor"></a>
+                    <div class="col-4 mt-2">
+                        <form class="form-inline">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input class="form-control-sm ml-2 w-75 search" type="text" placeholder="Search"
+                              aria-label="Search">
+                        </form>
                     </div>
-                    <div class="buttons">
-                        <button class="but but0" type="button">  <i class="material-icons">create</i> <span class="spans">Review</span> </button>
-                        <div class="clicklist">
-                            <ul class="clickul">
-                                <li class="clickli"><a href="">Write a review</a></li>
-                                <li class="clickli"><a href="">Post photos</a></li>   
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button class="but" type="button"> <i class="material-icons">notifications_none</i> <span class="spans">Alerts</span> </button>
-                    </div>
-                    <div class="buttons">
-                        <button class="but" type="button"> <i class="material-icons">favorite_border</i> <span class="spans">Saves</span> </button>
-                    </div>
-                    <div class="registration">
-                        <a class="singin" href="https://www.tripadvisor.com/RegistrationController?flow=sign_up_and_save&returnTo=%2FHotels-g297576-Batumi_Adjara_Region-Hotels.html&fullscreen=true&flowOrigin=login&hideNavigation=true">
-                            <span class="singin-span">Sing in</span> </a>
+                    <div class="col-5">
+                        <button type="button" class="btn rounded-pill text-dark btn-bg ml-5"><i class="fa fa-pencil"></i> Review</button>
+                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg"><i class="fa fa-heart-o"></i> Trips</button>
+                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg"><i class="fa fa-bell-o"></i> Alerts</button>
+                        <a href="https://www.tripadvisor.com/RegistrationController?flow=sign_up_and_save&returnTo=%2FHotels-g297576-Batumi_Adjara_Region-Hotels.html&fullscreen=true&flowOrigin=login&hideNavigation=true">
+                            <button type="button" class="btn rounded-pill btn-dark ml-3">Sing in</button> </a>                        
                     </div>
                 </nav>
             </div>
-            <div class="list-div">
-                <ul class="ul-list ul-list1">
-                    <li class="list"> <a href=""> Batumi </a></li>
-                    <div class="hidden">
-                        <ul>
-                            <li><a href="">Batumi Tourism</a></li>
-                            <li><a href="">Batumi Hotels</a></li>
-                            <li><a class="after" href="">Batumi Bed and Breakfast</a></li>
-                            <li><a href="">Batumi Vacation Rentals</a></li>
-                            <li><a href="">Batumi Vacation Package</a></li>
-                            <li><a href="">Flights to Batumi</a></li>
-                            <li><a href="">Batumi Restaurants</a></li>
-                            <li><a href="">Things to Do in Batumi</a></li>
-                            <li><a href="">Batumi Shopping</a></li>
-                            <li><a href="">Batumi Travel Forum</a></li>
-                            <li><a href="">Batumi Photos</a></li>
-                            <li><a href="">Batumi Map</a></li>
-                            <li><a href="">Batumi Travel Guide</a></li>
-                        </ul>
-                    </div>
-                </ul> 
-                <ul class="ul-list">
-                    <li class="list"> <a href=""> Hotels </a></li>
-                    <div class="hidden">
-                        <ul>
-                            <li><a href="">All Batumi Hotels</a></li>
-                            <li><a href="">Batumi Hotel Deals</a></li>
-                            <li><a href="">Last Minute Hotels in Batumi</a></li>
-                            <li><a href="">By Hotel Type</a></li>
-                            <li><a href="">By Hotel Class</a></li>
-                            <li><a href="">By Hotel Brand</a></li>
-                            <li><a href="">Popular Amenities</a></li>
-                            <li><a href="">Popular Batumi Categories</a></li>
-                            <li><a href="">Near Landmarks</a></li>
-                            <li><a href="">Near Train Stations</a></li>
-                            <li><a href="">Near Airports</a></li>
-                        </ul>
-                    </div>    
-                </ul> 
-                <ul class="ul-list"> 
-                    <li class="list"> <a href=""> Things to do </a></li>
-                    <div class="hidden">
-                        <ul>
-                            <li><a href="">All things to do in Batumi</a></li>
-                            <li><a href="">Admission Tickets</a></li>
-                        </ul>
-                    </div>
-                </ul>
-                <ul class="ul-list"> 
-                    <li class="list"> <a href=""> Restaurants </a></li>
-                    <li class="list"> <a href=""> Flights </a></li>
-                    <li class="list"> <a href=""> Flights </a></li>
-                    <li class="list"> <a href=""> Vacation Rentals </a></li>
-                    <li class="list"> <a href=""> Shopping </a></li>
-                    <li class="list"> <a href=""> Vacation Packages </a></li>
-                    <li class="list"> <a href=""> Cruises </a></li>
-                    <li class="list"> <a href=""> Rental Cars </a></li>
-                </ul>
-                
-                <ul class="ul-list ullist">
-                    <li class="list">
-                        <i class="material-icons" style="font-size:30px">more_horiz</i>
+            <div class="mt-1 p-2" style="font-size: 13px;">
+                <nav class="nav ml-5">
+                    <li class="vis"> <a class="nav-link text-dark" href=""> Batumi </a> 
+                        <div class="hidden">
+                            <ul>
+                                <li><a class="nav-link text-dark" href="">Batumi Tourism</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Hotels</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Bed and Breakfast</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Vacation Rentals</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Vacation Package</a></li>
+                                <li><a class="nav-link text-dark" href="">Flights to Batumi</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Restaurants</a></li>
+                                <li><a class="nav-link text-dark" href="">Things to Do in Batumi</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Shopping</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Travel Forum</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Photos</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Map</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Travel Guide</a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <div class="hidden">
+                    <li class="vis"> <a class="nav-link text-dark" href=""> Hotels </a>
+                        <div class="hidden">
+                            <ul>
+                                <li><a class="nav-link text-dark" href="">All Batumi Hotels</a></li>
+                                <li><a class="nav-link text-dark" href="">Batumi Hotel Deals</a></li>
+                                <li><a class="nav-link text-dark" href="">Last Minute Hotels in Batumi</a></li>
+                                <li><a class="nav-link text-dark" href="">By Hotel Type</a></li>
+                                <li><a class="nav-link text-dark" href="">By Hotel Class</a></li>
+                                <li><a class="nav-link text-dark" href="">By Hotel Brand</a></li>
+                                <li><a class="nav-link text-dark" href="">Popular Amenities</a></li>
+                                <li><a class="nav-link text-dark" href="">Popular Batumi Categories</a></li>
+                                <li><a class="nav-link text-dark" href="">Near Landmarks</a></li>
+                                <li><a class="nav-link text-dark" href="">Near Train Stations</a></li>
+                                <li><a class="nav-link text-dark" href="">Near Airports</a></li>
+                            </ul>
+                        </div>
+                     </li>
+                    <li class="vis"> <a class="nav-link text-dark" href=""> Restaurants </a>
+                        <div class="hidden">
+                            <ul>
+                                <li><a class="nav-link text-dark" href="">All things to do in Batumi</a></li>
+                                <li><a class="nav-link text-dark" href="">Admission Tickets</a></li>
+                            </ul>
+                        </div>
+                     </li>
+                    <li> <a class="nav-link text-dark" href=""> Flights </a> </li>                    
+                    <li> <a class="nav-link text-dark" href=""> Vacation Rentals </a> </li>
+                    <li> <a class="nav-link text-dark" href=""> Shopping </a> </li>
+                    <li> <a class="nav-link text-dark" href=""> Vacation Packages </a> </li>
+                    <li> <a class="nav-link text-dark" href=""> Cruises </a> </li>
+                    <li> <a class="nav-link text-dark" href=""> Rental Cars </a> </li>
+                    <li class="vis"> <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" class="bi bi-three-dots ml-2" viewBox="0 0 16 16">
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                     </svg> 
+                     <div class="hidden">
                         <ul>
-                            <li><a href="">Add a Place</a></li>
-                            <li><a href="">Travel Forum</a></li>
-                            <li><a href="">Airliners</a></li>
-                            <li><a href="">Best of 2021</a></li>
-                            <li><a href="">Road Trips</a></li>
-                            <li><a href="">Help Center</a></li>
+                            <li><a class="nav-link text-dark" href="">Add a Place</a></li>
+                            <li><a class="nav-link text-dark" href="">Travel Forum</a></li>
+                            <li><a class="nav-link text-dark" href="">Airliners</a></li>
+                            <li><a class="nav-link text-dark" href="">Best of 2021</a></li>
+                            <li><a class="nav-link text-dark" href="">Road Trips</a></li>
+                            <li><a class="nav-link text-dark" href="">Help Center</a></li>
                         </ul>
                     </div>
-                </ul>
-                
+                </li>               
+                </nav>
+            </div>
+            <div class="container-fluid mt-1"  style="font-size: 11px;">
+                <div class="row">
+                    <nav aria-label="breadcrumb" class="ml-5 col">
+                        <ol class="row p-3 ">
+                            <li class="breadcrumb-item"><a class="text-dark" href="">Europe</a></li>
+                            <li class="breadcrumb-item"><a class="text-dark" href="">Georgia</a></li>
+                            <li class="breadcrumb-item"><a class="text-dark" href="">Adjara Region</a></li>
+                            <li class="breadcrumb-item"><a class="text-dark" href="">Batumi</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Batumi Hotels</li>
+                        </ol>
+                    </nav>
+                    <div class="col-3">
+                        <p class="text-end p-3">Best Lodging in Batumi, Georgia (with Prices)</p>
+                    </div> 
+                </div>                                            
+            </div>
+            <div class="container-fluid row">
+                <div class="col ml-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95470.63887333577!2d41.55906710390968!3d41.602618345671715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406786304ea2d221%3A0x7a3053a9e12ea967!2z4YOR4YOQ4YOX4YOj4YOb4YOY!5e0!3m2!1ska!2sge!4v1626896038059!5m2!1ska!2sge" width="350" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-8">
+                    <h1 style="font-size: 30px;font-weight: bold;">Batumi Hotels and Places to Stay</h1>
+                    <div class="mt-5 row ml-1">
+                        <form class="" action="/action_page.php">
+                            <button class="calendar">
+                                <label for="birthday">Check In</label>
+                                <input type="date" id="birthday" name="birthday">
+                            </button>
+                        </form>
+                        <form class="ml-4" action="/action_page.php">
+                            <button class="calendar out">
+                                <label for="birthday">Check Out</label>
+                                <input type="date" id="birthday" name="birthday">
+                            </button>
+                        </form>
+                        <form class="ml-4" action="/action_page.php">
+                            <button class="calendar users">
+                                <label for="birthday">Guests</label><br>
+                                <span>
+                                    <span>1 room</span>,
+                                    <span>2 adults</span>,
+                                    <span>0 children</span>                                  
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people ml-1" viewBox="0 0 16 16">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                  </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </header>
-    </section>
 </body>
 </html>
+
+
+
