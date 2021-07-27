@@ -12,6 +12,9 @@ header {
 .logo {
     margin-left: 80px;
 }
+.nav-b button, .nav-b i{
+    font-weight: bold;
+}
 .btn-bg {
     font-size: 18px;
 }
@@ -31,12 +34,13 @@ header {
 }
 .vis:hover .hidden{
     display: block;
+    
 }
 
 /* ///////// calendar /////////// */
 
 .calendar{
-    width: 250px;
+    width: 220px;
     border: solid 2px rgb(167, 167, 167);
     border-radius: 5px;
     background-color: white;
@@ -44,6 +48,7 @@ header {
     font-weight: bold;
     text-align: left;
     padding: 5px;
+    border-left: solid 10px;
 }
 #birthday{
     border: none;
@@ -55,16 +60,199 @@ header {
 }
 .users {
     color: black;
+    width: 300px;
 }
 .users span{
     color: gray;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 14px;
+    margin-left: 3px;
 }
 
-/* ///////////// */
+/* ///////////// guests //////////// */
+
+#guests {
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+    position: absolute;
+}
+
+input,
+textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+}
+
+input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-group input[type='button'] {
+  background-color: #ffffff;
+  min-width: 38px;
+  width: auto;
+  transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  font-weight: bold;
+  height: 38px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+  font-size: 20px;
+  border: solid 1px rgb(167, 167, 167);
+  color: rgb(63, 63, 63);
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 38px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+  width: 50px;
+  display: inline-block;
+  font-size: 15px;
+  resize: vertical;
+  border: solid 1px rgb(167, 167, 167);
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
 
 
+/* ////////////////// filter ////////////// */
+
+.filter {
+  background-color: #ffffff;
+  margin-top: 20px;
+  /* margin-left: 60px; */
+  padding: 20px;
+  border: solid 1px rgb(216, 215, 215);
+}
+.filter h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.filter label {
+  font-size: 15px;
+  padding: 5px;
+}
+.filter hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* //////////// range /////////// */
+
+#price, #mil {
+  font-size: 20px;
+  margin-left: 100px;
+}
+.range {
+  margin-top: 20px;
+  width: 300px;
+  height: 15px;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -407px 0 0 400px #818181;
+}
+
+/* ////////////////// types ////////////////// */
+
+#hide, #less, #showLess, #hideBox {
+  display: none;
+}
+#more, #less, #showMore, #showLess, #all{
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.types a{
+  font-size: 13px;
+  color: black;
+}
 
 
+/* //////////////    cards    ////////////////// */
 
+.cards {
+   margin-top: 20px;
+}
+.card:hover{
+  box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.img-fluid {
+  object-fit: cover;
+  height: 100%;
+}
+.card-title, .gel {
+  font-size: 20px;
+  font-weight: bold;
+}
+.card-title:hover, .gel:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.cardButton {
+  border-radius: 20px;
+  border: 0px;
+  background-color: rgb(255, 170, 11);
+  width: 180px;
+  padding: 10px;
+  margin-left: 20px;
+}
+.cardButton:hover{
+  background-color: rgba(255, 170, 11, 0.692);
+}
+.card4{
+  font-size: 13px;
+}
+.vertical{  
+  border: none;
+  border-left: 1px solid rgb(221, 221, 221);
+  height: 30vh;
+  width: 1px;
+  margin-top: 50px;       
+}
+.fav {
+  border: solid 0px black;
+  border-radius: 50%; 
+  width: 30px; 
+  height: 30px; 
+  background-color: white; 
+  position: absolute; 
+  margin-left:-40px; 
+  margin-top: 10px;
+}
+.fav:hover{
+  color: rgb(240, 42, 42);
+}

@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="css/style.css">
     <title>tripadvisor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="jquery.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jq.js"></script>
 </head>
 <body>
        <header>
+
+             <!-- /////////// Navbar //////////// -->
+
             <div class="container-fluid p-2">
                 <nav class="row">
                     <a class="col-3"><img width="200px" class="logo" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="tripadvisor"></a>
@@ -24,15 +28,21 @@
                               aria-label="Search">
                         </form>
                     </div>
-                    <div class="col-5">
-                        <button type="button" class="btn rounded-pill text-dark btn-bg ml-5"><i class="fa fa-pencil"></i> Review</button>
-                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg"><i class="fa fa-heart-o"></i> Trips</button>
-                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg"><i class="fa fa-bell-o"></i> Alerts</button>
+                    <div class="col-5 nav-b">
+                        <button type="button" class="btn rounded-pill text-dark btn-bg ml-5">
+                            <i class="fa fa-pencil"></i> Review</button>
+                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg">
+                            <i class="fa fa-heart-o"></i> Trips</button>
+                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg">
+                            <i class="fa fa-bell-o"></i> Alerts</button>
                         <a href="https://www.tripadvisor.com/RegistrationController?flow=sign_up_and_save&returnTo=%2FHotels-g297576-Batumi_Adjara_Region-Hotels.html&fullscreen=true&flowOrigin=login&hideNavigation=true">
                             <button type="button" class="btn rounded-pill btn-dark ml-3">Sing in</button> </a>                        
                     </div>
                 </nav>
             </div>
+
+            <!-- ///////////// Lists ///////////// -->
+
             <div class="container-fluid" style="font-size: 13px;">
                 <hr>
                 <nav class="nav ml-4 p-2">
@@ -103,6 +113,9 @@
                 </nav>
                 <hr>
             </div>
+
+            <!-- /////////// Breadcrumb /////////// -->
+
             <div class="container-fluid p-3"  style="font-size: 11px;">
                 <div class="row ml-1">
                     <nav aria-label="breadcrumb" class="ml-5 col">
@@ -119,6 +132,9 @@
                     </div> 
                 </div>                                            
             </div>
+
+            <!--/////////// calendar ////////////-->
+
             <div class="container-fluid row">
                 <div class="col ml-5">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95470.63887333577!2d41.55906710390968!3d41.602618345671715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406786304ea2d221%3A0x7a3053a9e12ea967!2z4YOR4YOQ4YOX4YOj4YOb4YOY!5e0!3m2!1ska!2sge!4v1626896038059!5m2!1ska!2sge" width="350" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -126,35 +142,390 @@
                 <div class="col-8">
                     <h1 style="font-size: 30px;font-weight: bold;">Batumi Hotels and Places to Stay</h1>
                     <div class="mt-5 row ml-1">
-                        <form class="" action="/action_page.php">
+                        <div>
                             <button class="calendar">
                                 <label for="birthday">Check In</label>
                                 <input type="date" id="birthday" name="birthday">
                             </button>
-                        </form>
-                        <form class="ml-4" action="/action_page.php">
+                        </div>
+                        <div class="ml-4">
                             <button class="calendar out">
                                 <label for="birthday">Check Out</label>
                                 <input type="date" id="birthday" name="birthday">
                             </button>
-                        </form>
-                        <form class="ml-4" action="/action_page.php">
-                            <button class="calendar users">
+                        </div>
+                        <div class="ml-4">
+                            <button onclick="visible()" class="calendar users" id="visible">
                                 <label for="birthday">Guests</label><br>
                                 <span>
                                     <span>1 room</span>,
                                     <span>2 adults</span>,
                                     <span>0 children</span>                                  
                                 </span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people ml-1" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people ml-4" viewBox="0 0 16 16">
                                     <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
                                   </svg>
                             </button>
-                        </form>
+
+                            <!-- guests -->
+
+                            <div id="guests">
+                                <div class="p-2">
+                                    <button type="button" class="close" id="close" style="font-size: 30px;" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="pt-4">
+                                    <span class="row p-3">                                    
+                                        <span class="col-5 mt-2">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-door-closed-fill" viewBox="0 0 16 16">
+                                              <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1h8zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                            </svg> Rooms</span>
+                                        <div class="input-group col-7">
+                                          <input type="button" value="-" class="button-minus" data-field="quantity">
+                                          <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                          <input type="button" value="+" class="button-plus" data-field="quantity">
+                                        </div>
+                                        </span>
+                                      <span class="row p-3">                                    
+                                        <span class="col-5 mt-2">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                              <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                                              <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                                            </svg> Adults</span>
+                                            <div class="input-group col-7">
+                                              <input type="button" value="-" class="button-minus" data-field="quantity">
+                                              <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                              <input type="button" value="+" class="button-plus" data-field="quantity">
+                                            </div>
+                                      </span>
+                                      <span class="row p-3">                                  
+                                          <span class="col-5 "><i class="fa fa-child" style="font-size:24px"></i> Children</span>
+                                          <div class="input-group col-7">
+                                              <input type="button" value="-" class="button-minus" data-field="quantity">
+                                              <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                              <input type="button" value="+" class="button-plus" data-field="quantity">
+                                            </div>
+                                      </span>
+                                      <div style="text-align: center; padding: 10px;"><button type="button" style="width: 250px; " class="btn btn-dark">Update</button></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
+
+          <!--///////////// filter //////////// -->
+
+          <section class="row pl-5 pr-3">
+              
+            <div class="col-3 filter">
+              <div class="">
+                <h3>Deals</h3><br>  
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">Free cancellation 
+                    <span  data-bs-toggle="tooltip" data-bs-placement="right" title="Free cancellation is a deal-level filter that applies to a specific partner offer,  as displayed below the partner’s offer in an individual property. Other offers for the same property may have different benefits.">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                      </svg></span>
+                </label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">Reserve now, pay at stay 
+                    <span  data-bs-toggle="tooltip" data-bs-placement="right" title="Reserve now, pay at stay is a deal-level filter that applies to a specific partner offer, as displayed below the partner’s offer in an individual property. Other offers for the same property may have different benefits.                       ">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                  </svg></span></label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">Properties with special offers</label>
+              </div>
+              <hr>
+              <div>
+                  <h3>Price</h3><br>
+                    <span id="price">GEL <span id="from">0</span> +</span>
+                    <Input class="range" type="range"  value="0" min="0" max="380" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+                    <select class="form-select mt-4 ml-4" aria-label="Default select example" style="border:solid 1px rgb(201, 201, 201); padding: 5px;">
+                        <option selected value="">Price per night</option>
+                        <option value="">Price + taxes and fees</option>
+                        <option value="">Total stay + taxes and fees</option>
+                      </select>  
+              </div>
+              <hr>
+              <div>
+                  <h3>Popular</h3>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">Beachfront</label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">Air conditioning</label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">5 stars</label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">
+                     <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
+                  </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
+                  </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
+                  </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
+                  </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  </svg>  & up</label>
+              </div>
+              <hr>
+              <div class="types">
+                  <h3>Property types</h3>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">B&Bs & Inns </label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">Hotels</label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">Specialty loadings</label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">Condos</label><br>
+                
+                <div id="hide">
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Lodges</label><br>
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Hostels</label><br>
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Cotteges</label><br>
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Villas</label><br>
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Pensions</label><br>
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Resorts</label>
+                </div>
+                <br>
+                <span id="more">Show more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg></span>
+                  <span id="less">Show less <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                  </svg></span>
+                <p><br><a href="https://www.tripadvisor.com/VacationRentals-g297576-Reviews-Batumi_Adjara_Region-Vacation_Rentals.html" target="_blank">View Vacation Rentals</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                  </svg></p>
+              </div>
+              <hr>
+              <div>
+                  <h3>Amenities</h3>
+                  <input type="checkbox" id="deals" name="deals">
+                  <label for="deals">Free Wifi</label><br>
+                  <input type="checkbox" id="deals" name="deals">
+                  <label for="deals">Breakfast included</label><br>
+                  <input type="checkbox" id="deals" name="deals">
+                  <label for="deals">Pool</label><br>
+                  <input type="checkbox" id="deals" name="deals">
+                  <label for="deals">Free parking</label><br><br>
+                  <span id="all">Show all</span>
+              </div>
+              <hr>
+              <div>
+                  <h3>Distance from</h3>
+                  <span id="mil">25</span> mi
+                  <Input class="range" type="range"  value="25" min="0" max="25" onChange="rangeSlider(this.value)" onmousemove="rangeSlider(this.value)"></Input>
+                  <br><br>
+                  <form>
+                    <input type="radio" id="deals" name="deals">
+                    <label for="deals">Batumi Boulevard</label><br>
+                    <input type="radio" id="deals" name="deals">
+                    <label for="deals">Batumi Botanical Gardens</label><br>
+                    <input type="radio" id="deals" name="deals">
+                    <label for="deals">Batumi Dolphinarium</label><br>
+                    <input type="radio" id="deals" name="deals">
+                    <label for="deals">Europe Square</label><br><br>
+                    <span id="all">Show all</span>
+                </form> 
+              </div>
+              <hr>
+
+              <!-- /////////// rating //////////// -->
+
+              <div>
+                  <h3>Traveler rating</h3>
+                  <input type="radio" id="deals" name="deals">
+                  <label for="deals">
+                    <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                   <circle cx="8" cy="8" r="8"/>
+                 </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                   <circle cx="8" cy="8" r="8"/>
+                 </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                   <circle cx="8" cy="8" r="8"/>
+                 </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                   <circle cx="8" cy="8" r="8"/>
+                 </svg> </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
+                  </svg></label><br>
+                    <input type="radio" id="deals" name="deals">
+                    <label for="deals">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                     </svg>  & up</label><br>
+                    <input type="radio" id="deals" name="deals">
+                    <label for="deals">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                     </svg>  & up</label><br>
+                    <input type="radio" id="deals" name="deals">
+                    <label for="deals">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                       <circle cx="8" cy="8" r="8"/>
+                     </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                     </svg>  & up</label><br><br>
+              </div>
+              <hr>
+              <div>
+                  <h3>Hotel class</h3>
+                  <input type="checkbox" id="deals" name="deals">
+                <label for="deals">5 stars</label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">4 stars</label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">3 stars</label><br>
+                <input type="checkbox" id="deals" name="deals">
+                <label for="deals">2 stars</label>
+              </div>
+              <hr>
+              <div>
+                  <h3>Style</h3>
+                  <input type="checkbox" id="deals" name="deals">
+                  <label for="deals">Budget</label><br>
+                  <input type="checkbox" id="deals" name="deals">
+                  <label for="deals">Mind-range</label><br>
+                  <input type="checkbox" id="deals" name="deals">
+                  <label for="deals">Luxury</label><br>
+                  <input type="checkbox" id="deals" name="deals">
+                  <label for="deals">Family-friendly</label><br>
+                  <div id="hideBox">
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Busines</label><br>
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Modern</label><br>
+                    <input type="checkbox" id="deals" name="deals">
+                    <label for="deals">Romantic</label>                  
+                </div><br>
+                  <span id="showMore">Show more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg></span>
+                  <span id="showLess">Show less <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                  </svg></span>          
+              </div>
+              <hr>
+              <div>
+                <h3>Brands</h3>
+                <input type="checkbox" id="deals" name="deals">
+              <label for="deals">Le Meridien</label><br>
+              <input type="checkbox" id="deals" name="deals">
+              <label for="deals">Best Western</label><br>
+              <input type="checkbox" id="deals" name="deals">
+              <label for="deals">Wyndham</label><br>
+              <input type="checkbox" id="deals" name="deals">
+              <label for="deals">Hilton Hotels</label>
+            </div>
+            </div>
+             
+            <div class="col-9 cards">
+               
+              <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img/exterior.jpg" class="img-fluid rounded-start" alt="hilton">
+                      <button type="button" class="fav">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg></button>
+                    </div>
+                    <div class="col">
+                      <h5 class="card-title pt-3">Hilton Batumi</h5><br><br>
+                        <img width="110px" style="margin-left: 50px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                      <h6 class="gel" style="text-align: center;">GEL 443</h6><br>
+                      <button class="cardButton" type="button">View deal</button>
+                    </div>
+                    <hr class="vertical">
+                    <div class="col-2 pt-5 pb-4">
+                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com <br>
+                        <span style="font-weight: bold;">GEL 444</span></a></p><br>
+                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com <br>
+                        <span style="font-weight: bold;">GEL 443</span></a></p><br>
+                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Agoda.com <br>
+                        <span style="font-weight: bold;">GEL 444</span></a></p><br>
+                      <hr><br>
+                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">View all 6 deals from <br>
+                        <span style="font-weight: bold;"> GEL 443</span></a></p>
+                    </div>
+                    <hr class="vertical">
+                    <div class="col card4 pt-5">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                          <circle cx="8" cy="8" r="8"/>
+                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                          <circle cx="8" cy="8" r="8"/>
+                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                          <circle cx="8" cy="8" r="8"/>
+                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                          <circle cx="8" cy="8" r="8"/>
+                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                        </svg>
+                        <span>877 reviews</span><br><br><br>
+                      </span>
+                      <span>#1 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
+                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                      </svg>
+                        Free Wifi</span><br>
+                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
+                        <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z"/>
+                      </svg>
+                        Pool</span><br>
+                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                      </svg>
+                        Special offer</span><br>
+                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                      </svg>
+                        Visit hotel website</span>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+
+          </section>
+          
+
 </body>
 </html>
 
