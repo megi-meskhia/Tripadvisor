@@ -3,14 +3,16 @@
  html, body {
 	width: 100%;
 	background-color: #f2f2f2;
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 header {
     background-color: white;
      padding-bottom: 15px;
 }
 .logo {
-    margin-left: 80px;
+    margin-left: 20%;
+    max-width: 200px;
+    width: 100%;
 }
 .nav-b button, .nav-b i{
     font-weight: bold;
@@ -22,8 +24,19 @@ header {
     background-color: #f2f2f2;
     color: blueviolet;
 }
-.search {
-    border: solid 2px rgb(167, 167, 167);
+.search{
+  border: solid 2px rgb(167, 167, 167);
+  border-left: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.iconS {
+  border: solid 2px rgb(167, 167, 167);
+  padding: 5.5px;
+  border-radius: 3px;
+  border-right: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 .hidden {
     display: none;
@@ -40,8 +53,9 @@ header {
 /* ///////// calendar /////////// */
 
 .calendar{
-    width: 220px;
-    border: solid 2px rgb(167, 167, 167);
+    max-width: 220px;
+    width: 100%;
+    border: solid 1px rgb(167, 167, 167);
     border-radius: 5px;
     background-color: white;
     color: rgb(1, 168, 57);
@@ -49,6 +63,7 @@ header {
     text-align: left;
     padding: 5px;
     border-left: solid 10px;
+    margin-left: 10px;
 }
 #birthday{
     border: none;
@@ -60,7 +75,8 @@ header {
 }
 .users {
     color: black;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
 }
 .users span{
     color: gray;
@@ -212,10 +228,13 @@ input[type="number"] {
 .img-fluid {
   object-fit: cover;
   height: 100%;
+  width: 100%;
+  position: absolute;
 }
 .card-title, .gel {
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 .card-title:hover, .gel:hover{
   cursor: pointer;
@@ -223,11 +242,11 @@ input[type="number"] {
 }
 .cardButton {
   border-radius: 20px;
-  border: 0px;
+  border: none;
   background-color: rgb(255, 170, 11);
   width: 180px;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 40px;
 }
 .cardButton:hover{
   background-color: rgba(255, 170, 11, 0.692);
@@ -240,18 +259,56 @@ input[type="number"] {
   border-left: 1px solid rgb(221, 221, 221);
   height: 30vh;
   width: 1px;
-  margin-top: 50px;       
+  margin-top: 50px;
+  margin-bottom: 30px;       
+}
+.badge {
+  position: absolute; 
+  margin-top: 20px;
+  color: white;
+  padding: 5px;
 }
 .fav {
-  border: solid 0px black;
+  border: none;
   border-radius: 50%; 
   width: 30px; 
   height: 30px; 
-  background-color: white; 
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.527); 
   position: absolute; 
-  margin-left:-40px; 
   margin-top: 10px;
+  right: 0px;
 }
 .fav:hover{
   color: rgb(240, 42, 42);
 }
+
+
+.about {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.about h6 {
+  font-weight: bold;
+  font-size: 15px;
+}
+.about p {
+  font-size: 13px;
+}
+
+
+.footerDrop button{
+  border-radius: 10px; 
+  border: solid 2px rgb(187, 187, 187); 
+  background-color: white; 
+  padding: 10px; 
+  font-weight: bold; 
+  max-width: 200px; 
+  width: 100%;
+  text-align: left;
+}
+.footerDrop svg{
+  float: right;
+}
+
