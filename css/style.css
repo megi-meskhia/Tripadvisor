@@ -5,24 +5,17 @@
 	background-color: #f2f2f2;
   font-family: 'Poppins', sans-serif;
 }
+
+/*////////// header ////////////*/
+
 header {
     background-color: white;
-     padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 .logo {
     margin-left: 20%;
     max-width: 200px;
     width: 100%;
-}
-.nav-b button, .nav-b i{
-    font-weight: bold;
-}
-.btn-bg {
-    font-size: 18px;
-}
-.btn-bg:hover {
-    background-color: #f2f2f2;
-    color: blueviolet;
 }
 .search{
   border: solid 2px rgb(167, 167, 167);
@@ -46,8 +39,7 @@ header {
     padding: 10px;
 }
 .vis:hover .hidden{
-    display: block;
-    
+    display: block;   
 }
 
 /* ///////// calendar /////////// */
@@ -65,7 +57,7 @@ header {
     border-left: solid 10px;
     margin-left: 10px;
 }
-#birthday{
+#date{
     border: none;
     color: gray;
     cursor: pointer;
@@ -98,7 +90,6 @@ header {
 input,
 textarea {
   border: 1px solid #eeeeee;
-  box-sizing: border-box;
   margin: 0;
   outline: none;
 }
@@ -177,7 +168,6 @@ input[type="number"] {
 
 #price, #mil {
   font-size: 20px;
-  margin-left: 100px;
 }
 .range {
   margin-top: 20px;
@@ -234,7 +224,6 @@ input[type="number"] {
 .card-title, .gel {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
 }
 .card-title:hover, .gel:hover{
   cursor: pointer;
@@ -245,8 +234,7 @@ input[type="number"] {
   border: none;
   background-color: rgb(255, 170, 11);
   width: 180px;
-  padding: 10px;
-  margin-left: 40px;
+  padding: 10px;  
 }
 .cardButton:hover{
   background-color: rgba(255, 170, 11, 0.692);
@@ -283,6 +271,7 @@ input[type="number"] {
   color: rgb(240, 42, 42);
 }
 
+/* //////////// about /////////// */
 
 .about {
   background-color: white;
@@ -297,6 +286,7 @@ input[type="number"] {
   font-size: 13px;
 }
 
+/* ///////////// footer //////////// */
 
 .footerDrop button{
   border-radius: 10px; 

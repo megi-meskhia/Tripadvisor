@@ -23,22 +23,22 @@
                     <div class="col-3">
                       <a href=""><img class="logo" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="tripadvisor"></a>
                     </div>
-                    <div class="col-4 mt-2">
+                    <div class="col-5 mt-2">
                         <form class="form-inline">
                             <i class="fa fa-search iconS" aria-hidden="true"></i>
                             <input class="form-control-sm w-75 search" type="text" placeholder="Search"
                               aria-label="Search">
                         </form>
                     </div>
-                    <div class="col-5 nav-b">
-                        <button type="button" class="btn rounded-pill text-dark btn-bg">
-                            <i class="fa fa-pencil"></i> Review</button>
-                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg">
-                            <i class="fa fa-heart-o"></i> Trips</button>
-                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg">
-                            <i class="fa fa-bell-o"></i> Alerts</button>
+                    <div class="col-4 nav-b ">
+                        <button type="button" class="btn rounded-pill text-dark btn-bg font-weight-bold">
+                            <i class="fa fa-pencil font-weight-bold"></i> Review</button>
+                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg font-weight-bold">
+                            <i class="fa fa-heart-o font-weight-bold"></i> Trips</button>
+                        <button type="button" class="btn btn-link rounded-pill text-dark btn-bg font-weight-bold">
+                            <i class="fa fa-bell-o font-weight-bold"></i> Alerts</button>
                         <a href="https://www.tripadvisor.com/RegistrationController?flow=sign_up_and_save&returnTo=%2FHotels-g297576-Batumi_Adjara_Region-Hotels.html&fullscreen=true&flowOrigin=login&hideNavigation=true">
-                            <button type="button" class="btn rounded-pill btn-dark ml-3">Sing in</button> </a>                        
+                            <button type="button" class="btn rounded-pill btn-dark ml-3 font-weight-bold">Sing in</button> </a>                        
                     </div>
                 </nav>
             </div>
@@ -129,7 +129,7 @@
                             <li class="breadcrumb-item active" aria-current="page">Batumi Hotels</li>
                         </ol>
                     </nav>
-                    <div class="col-3">
+                    <div class="col-3 right">
                         <p class="text-end text-muted">Best Lodging in Batumi, Georgia (with Prices)</p>
                     </div> 
                 </div>                                            
@@ -146,19 +146,19 @@
                     <div class="mt-5 row">
                         <div>
                             <button class="calendar">
-                                <label for="birthday">Check In</label>
-                                <input type="date" id="birthday" name="birthday">
+                                <label for="date">Check In</label>
+                                <input type="date" id="date" name="date">
                             </button>
                         </div>
-                        <div class="">
+                        <div>
                             <button class="calendar out">
-                                <label for="birthday">Check Out</label>
-                                <input type="date" id="birthday" name="birthday">
+                                <label for="date">Check Out</label>
+                                <input type="date" id="date" name="date">
                             </button>
                         </div>
-                        <div class="">
+                        <div>
                             <button onclick="visible()" class="calendar users" id="visible">
-                                <label for="birthday">Guests</label><br>
+                                <label for="date">Guests</label><br>
                                 <span>
                                     <span>1 room</span>,
                                     <span>2 adults</span>,
@@ -217,13 +217,15 @@
             </div>
         </header>
 
+        <!-- ///////////// section ////////////// -->
+
           <section class="row pl-5 pr-3">
               
             <!--///////////// filter //////////// -->
 
             <div class="col-3">
               <div class="filter">
-                <div class="">
+                <div>
                   <h3>Deals</h3><br>  
                   <input type="checkbox" id="deals" name="deals">
                   <label for="deals">Free cancellation 
@@ -246,13 +248,15 @@
                 <hr>
                 <div>
                     <h3>Price</h3><br>
-                      <span id="price">GEL <span id="from">0</span> +</span>
+                      <div class="center"><span id="price">GEL <span id="from">0</span> +</span></div>
                       <Input class="range" type="range"  value="0" min="0" max="380" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
-                      <select class="form-select mt-4" aria-label="Default select example" style="border:solid 1px rgb(201, 201, 201); padding: 5px; max-width: 250px; width: 100%;">
+                      <div class="center">
+                        <select class="form-select mt-4" aria-label="Default select example" style="border:solid 1px rgb(201, 201, 201); padding: 5px; max-width: 250px; width: 100%;">
                           <option selected value="">Price per night</option>
                           <option value="">Price + taxes and fees</option>
                           <option value="">Total stay + taxes and fees</option>
-                        </select>  
+                        </select> 
+                      </div> 
                 </div>
                 <hr>
                 <div>
@@ -331,7 +335,7 @@
                 <hr>
                 <div>
                     <h3>Distance from</h3>
-                    <span id="mil">25</span> mi
+                    <div class="center"><span id="mil">25</span> mi</div>
                     <Input class="range" type="range"  value="25" min="0" max="25" onChange="rangeSlider(this.value)" onmousemove="rangeSlider(this.value)"></Input>
                     <br><br>
                     <form>
@@ -461,6 +465,25 @@
             <!-- ////////////// cards /////////// -->
 
             <div class="col-9 cards">
+
+              <div class="row mb-3">
+                <span class="col mt-2"> <span style="font-weight: bold;">1,410 properties</span> in Batumi</span>
+                <div class="col right">
+                  <span> 
+                    Sort by: 
+                    <select class="form-select" aria-label="Default select example" style="border:solid 1px rgb(201, 201, 201); padding: 5px; max-width: 250px; width: 100%;">
+                      <option value="">Traveler Ranked</option>
+                      <option selected value="">Best Value</option>
+                      <option value="">Price (low to high)</option>
+                      <option value="">Distance to city center </option>
+                    </select>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
                
               <div class="card mb-3">
                 <div class="row g-0">
@@ -472,10 +495,10 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Hilton Batumi</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel" style="text-align: center;">GEL 443</h6><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                      <h6 class="gel">GEL 443</h6><br>
                       <button class="cardButton" type="button">View deal</button>
                     </div>
                     <hr class="vertical">
@@ -548,9 +571,9 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Sheraton Batumi Hotel</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                       <h6 class="gel">GEL 578</h6><br>
                       <button class="cardButton" type="button">View deal</button>
                     </div>
@@ -628,9 +651,9 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Radisson Blu Hotel Batumi</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                       <h6 class="gel">GEL 261</h6><br>
                       <button class="cardButton" type="button">View deal</button>
                     </div>
@@ -700,12 +723,12 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Colosseum Marina Hotel</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                       <h6 class="gel">GEL 364</h6><br>
                       <button class="cardButton" type="button">View deal</button><br><br>
-                      <span style="font-size: 15px; margin-left: 50px; font-weight: bold;">
+                      <span style="font-size: 15px; font-weight: bold;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                           <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                         </svg>
@@ -770,12 +793,12 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">The Grand Gloria Hotel</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                       <h6 class="gel">GEL 410</h6><br>
                       <button class="cardButton" type="button">View deal</button><br><br>
-                      <span style="font-size: 15px; margin-left: 50px; font-weight: bold;">
+                      <span style="font-size: 15px; font-weight: bold;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                           <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                         </svg>
@@ -841,9 +864,9 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Divan Suites Batumi</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                       <h6 class="gel">GEL 272</h6><br>
                       <button class="cardButton" type="button">View deal</button><br><br>
                     </div>
@@ -906,13 +929,13 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Hotel Old Town</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px"  src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                         <h6 class="gel" style="color: red; text-decoration: line-through;">GEL 169</h6><br>
                         <h6 class="gel">GEL 137</h6><br>
                       <button class="cardButton" type="button">View deal</button><br><br>
-                      <span style="font-size: 15px; margin-left: 20px;">
+                      <span style="font-size: 15px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                           <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                         </svg>
@@ -981,9 +1004,9 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Wyndham Batumi</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                       <h6 class="gel">GEL 247</h6><br>
                       <button class="cardButton" type="button">View deal</button><br><br>
                     </div>
@@ -1046,9 +1069,9 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Hotel Old Town</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                         <h6 class="gel" style="color: red; text-decoration: line-through;">GEL 201</h6><br>
                         <h6 class="gel">GEL 183</h6><br>
                       <button class="cardButton" type="button">View deal</button><br><br>
@@ -1111,12 +1134,12 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col">
+                    <div class="col center">
                       <h5 class="card-title pt-3">Grand Royal Hotel</h5><br><br>
-                        <img width="100px" style="margin-left: 70px;" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
                       <h6 class="gel">GEL 86</h6><br>
                       <button class="cardButton" type="button">View deal</button><br><br>
-                      <span style="font-size: 15px; margin-left: 50px; font-weight: bold;">
+                      <span style="font-size: 15px; font-weight: bold;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                           <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
                         </svg>
@@ -1252,11 +1275,11 @@
                 </div><br>
                 
               </div>
-              <div style="margin-left: 20px;">
-                <p style="font-size: 13px;">This is the version of our website addressed to speakers of English in the United States. 
+              <div style="margin-left: 20px; font-size: 13px;">
+                <p>This is the version of our website addressed to speakers of English in the United States. 
                   If you are a resident of another country or region, please select the appropriate version of Tripadvisor for your country or region in the drop-down menu.
-                <span style="font-weight: bold; text-decoration: underline; cursor: pointer;">more</span></p>
-                <p id="footerText" style="display: none;">TripAdvisor LLC makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates,
+                <span id="footerMore" style="font-weight: bold; text-decoration: underline; cursor: pointer;">more</span></p><br>
+                <p id="footerText" style="display: none; ">TripAdvisor LLC makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates,
                    qualifications or other applicable restrictions. TripAdvisor LLC is not responsible for any content on external web sites that are not owned or operated by Tripadvisor. Indicative hotel prices displayed on our “Explore” pages are estimates extrapolated from historic pricing data. <br><br>
                   TripAdvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.</p>
               </div>
@@ -1284,7 +1307,7 @@
 
           </footer>
           
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>

@@ -1,23 +1,14 @@
 $(document).ready(function(){
     $("#visible").click(function(){
-      $("#guests").show();;
+      $("#guests").show();
     });
   });
 
 $(document).ready(function(){
     $("#close").click(function(){
-      $("#guests").hide();;
+      $("#guests").hide();
     });
   });
-
-
-// $('.input-group').on('click', '.button-plus', function(e) {
-//     incrementValue(e);
-//   });
-  
-// $('.input-group').on('click', '.button-minus', function(e) {
-//     decrementValue(e);
-//   });  
 
 
   $(document).ready(function(){
@@ -51,6 +42,13 @@ $(document).ready(function(){
   });
 
 
+// /////////// footer ////////
 
+$(document).ready(function(){
+  $("#footerMore").click(function(){
+    $("#footerText").show();
+    $("#footerMore").hide();
+  });
+});
 
   
