@@ -1,0 +1,109 @@
+@media (max-width: 1024px) {
+    .map {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .lg-hidden{
+        display: none;
+    }
+    .navT {
+        display: none;
+    }
+    .footerDrop {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .md-hidden {
+        display: none;
+    }
+    .logo {
+        padding: 5px 15px 0px 0px;
+    }
+    .calendar {
+        max-width: 200px;
+    }
+    .mob-nav {
+        display: block;
+    }
+
+    /* cards */
+
+    .img-fluid {
+        position: relative;
+        max-height: 450px;
+        width: 100%;
+    }
+    .fav {
+       margin-right: 20px;
+    }
+    .badge {
+        left: 15px;
+    }
+    .card-price {
+       margin-top: -60px;
+    }
+    .card-price h6, button{
+       font-size: 15px;        
+    }
+    .card4 {
+       display: flex;
+       justify-content:center;
+       margin-top: -30px;
+       left: 10px;
+    }  
+    .card1 {
+        margin-right: 20px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .sm-hidden {
+        display: none;
+    }
+    .sm-vis {
+        display:inline-block;
+    }
+    .mob-tit {
+        font-size: 14px;
+    }
+    .calendar {
+       margin-top: 10px;
+       max-width: 300px;
+       font-size: 12px;
+       height: 45px;
+    }
+    .lg-cal {
+        margin-top: 20px;
+    }
+    .footerDrop {
+        display: inline-flex;
+        justify-content: center;
+    }
+    .footerP {
+        justify-content: center;
+        text-align: center;
+    }
+    .f-p {
+        text-align: center;
+    }
+    .pgn {
+        font-size: 12px;
+    }
+    .img3 {
+        max-height: 200px;
+    }
+    .mob-tit{
+       text-align: center; 
+    }
+    .mob-cal {
+        justify-content: center;
+    }
+}

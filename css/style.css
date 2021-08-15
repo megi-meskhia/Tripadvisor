@@ -37,13 +37,22 @@ header {
     background-color: rgb(255, 255, 255);
     box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 10px;
+    z-index: 4;
 }
 .vis:hover .hidden{
     display: block;   
 }
+.mob-nav {
+  display: none;
+}
 
 /* ///////// calendar /////////// */
-
+.lg-cal {
+    margin-left: 4%;
+}
+.mob-tit{
+  font-size: 30px;
+}
 .calendar{
     max-width: 220px;
     width: 100%;
@@ -56,6 +65,7 @@ header {
     padding: 5px;
     border-left: solid 10px;
     margin-left: 10px;
+    margin-top: 50px;
 }
 #date{
     border: none;
@@ -67,13 +77,13 @@ header {
 }
 .users {
     color: black;
-    max-width: 300px;
+    max-width: 270px;
     width: 100%;
 }
 .users span{
     color: gray;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 3px;
 }
 
@@ -85,6 +95,7 @@ header {
     box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
     display: none;
     position: absolute;
+    z-index: 4;
 }
 
 input,
@@ -201,10 +212,6 @@ input[type="number"] {
   text-decoration: underline;
   cursor: pointer;
 }
-.types a{
-  font-size: 13px;
-  color: black;
-}
 
 
 /* //////////////    cards    ////////////////// */
@@ -222,6 +229,7 @@ input[type="number"] {
   position: absolute;
 }
 .card-title, .gel {
+  margin-left: 5px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -233,7 +241,8 @@ input[type="number"] {
   border-radius: 20px;
   border: none;
   background-color: rgb(255, 170, 11);
-  width: 180px;
+  max-width: 150px;
+  width: 100%;
   padding: 10px;  
 }
 .cardButton:hover{
@@ -252,9 +261,10 @@ input[type="number"] {
 }
 .badge {
   position: absolute; 
-  margin-top: 20px;
+  margin-top: 15px;
   color: white;
   padding: 5px;
+  left: 15px;
 }
 .fav {
   border: none;

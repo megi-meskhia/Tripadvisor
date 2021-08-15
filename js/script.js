@@ -5,3 +5,4 @@ function rangeSlide(value) {
 function rangeSlider(value) {
     document.getElementById('mil').innerHTML = value;
 }
+

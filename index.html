@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>tripadvisor</title>
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>Tripadvisor</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/script.js"></script>
@@ -18,36 +21,57 @@
 
              <!-- /////////// Navbar //////////// -->
 
-            <div class="container-fluid p-2">
+            <div class="container-fluid p-2  md-hidden">
                 <nav class="row">
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
                       <a href=""><img class="logo" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="tripadvisor"></a>
                     </div>
-                    <div class="col-5 mt-2">
-                        <form class="form-inline">
+                    <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 align-self-center">
+                        <form class="form-inline justify-content-center">
                             <i class="fa fa-search iconS" aria-hidden="true"></i>
                             <input class="form-control-sm w-75 search" type="text" placeholder="Search"
                               aria-label="Search">
                         </form>
                     </div>
-                    <div class="col-4 nav-b ">
-                        <button type="button" class="btn rounded-pill text-dark btn-bg font-weight-bold">
-                            <i class="fa fa-pencil font-weight-bold"></i> Review</button>
+                    <div class="col-xl-4 col-lg-5 col-md-5 col-sm-5 nav-b">
+                        <div>
+                          <button type="button" class="btn rounded-pill text-dark btn-bg font-weight-bold">
+                            <i class="fa fa-pencil font-weight-bold"></i> <span class="navT ">Review</span></button>
                         <button type="button" class="btn btn-link rounded-pill text-dark btn-bg font-weight-bold">
-                            <i class="fa fa-heart-o font-weight-bold"></i> Trips</button>
+                            <i class="fa fa-heart-o font-weight-bold"></i> <span class="navT ">Trips</span></button>
                         <button type="button" class="btn btn-link rounded-pill text-dark btn-bg font-weight-bold">
-                            <i class="fa fa-bell-o font-weight-bold"></i> Alerts</button>
+                            <i class="fa fa-bell-o font-weight-bold"></i> <span class="navT ">Alerts</span></button>
                         <a href="https://www.tripadvisor.com/RegistrationController?flow=sign_up_and_save&returnTo=%2FHotels-g297576-Batumi_Adjara_Region-Hotels.html&fullscreen=true&flowOrigin=login&hideNavigation=true">
                             <button type="button" class="btn rounded-pill btn-dark ml-3 font-weight-bold">Sing in</button> </a>                        
-                    </div>
+
+                        </div>                    
+                      </div>
                 </nav>
+            </div>
+
+            <!-- mobile nav -->
+
+            <div class="container mob-nav">
+              <nav class="row p-2">
+                <div class="align-self-center col-2">
+                  <button style="border: solid 0px; background-color: white;" class=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-border-width" viewBox="0 0 16 16">
+                    <path d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-2zm0 5A.5.5 0 0 1 .5 8h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                  </svg></button>
+                </div>
+                <div class="col-8 center">
+                  <a href=""><img style="max-width: 200px; width: 100%;" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="tripadvisor"></a>
+                </div>
+                <div class="align-self-center col-2 right">
+                  <button style="border: solid 0px; background-color: white; font-size: 20px; "><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+              </nav>
             </div>
 
             <!-- ///////////// Lists ///////////// -->
 
-            <div class="container-fluid" style="font-size: 13px;">
+            <div class="md-hidden lg-list" style="font-size: 13px;">
                 <hr>
-                <nav class="nav ml-4 p-2">
+                <nav class="nav ml-4 p-2 md-list">
                     <li class="vis"> <a class="nav-link text-dark" href=""> Batumi </a> 
                         <div class="hidden">
                             <ul>
@@ -95,9 +119,9 @@
                     <li> <a class="nav-link text-dark" href=""> Flights </a> </li>                    
                     <li> <a class="nav-link text-dark" href=""> Vacation Rentals </a> </li>
                     <li> <a class="nav-link text-dark" href=""> Shopping </a> </li>
-                    <li> <a class="nav-link text-dark" href=""> Vacation Packages </a> </li>
-                    <li> <a class="nav-link text-dark" href=""> Cruises </a> </li>
-                    <li> <a class="nav-link text-dark" href=""> Rental Cars </a> </li>
+                    <li> <a class="nav-link text-dark d-sm-none d-md-none d-lg-block" href=""> Vacation Packages </a> </li>
+                    <li> <a class="nav-link text-dark d-sm-none d-md-none d-lg-block" href=""> Cruises </a> </li>
+                    <li> <a class="nav-link text-dark d-sm-none d-md-none d-lg-none d-xl-block" href=""> Rental Cars </a> </li>
                     <li class="vis"> <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" class="bi bi-three-dots ml-2" viewBox="0 0 16 16">
                         <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
                      </svg> 
@@ -116,11 +140,13 @@
                 <hr>
             </div>
 
+            
+
             <!-- /////////// Breadcrumb /////////// -->
 
-            <div class="container-fluid p-3"  style="font-size: 11px;">
-                <div class="row ml-1">
-                    <nav aria-label="breadcrumb" class="ml-5 col">
+            <div class="container-fluid p-3 md-hidden"  style="font-size: 11px;">
+                <div class="row">
+                    <nav aria-label="breadcrumb" class="ml-5 col-lg-6 col-md-6 col-sm-6">
                         <ol class="row">
                             <li class="breadcrumb-item"><a class="text-dark" href="">Europe</a></li>
                             <li class="breadcrumb-item"><a class="text-dark" href="">Georgia</a></li>
@@ -129,7 +155,7 @@
                             <li class="breadcrumb-item active" aria-current="page">Batumi Hotels</li>
                         </ol>
                     </nav>
-                    <div class="col-3 right">
+                    <div class="col-lg-5 col-md-5 col-sm-5 right">
                         <p class="text-end text-muted">Best Lodging in Batumi, Georgia (with Prices)</p>
                     </div> 
                 </div>                                            
@@ -138,12 +164,12 @@
             <!--/////////// calendar ////////////-->
 
             <div class="container-fluid row">
-                <div class="col ml-5">
+                <div class="col-xl-3  d-lg-none d-xl-block ml-5 map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95470.63887333577!2d41.55906710390968!3d41.602618345671715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406786304ea2d221%3A0x7a3053a9e12ea967!2z4YOR4YOQ4YOX4YOj4YOb4YOY!5e0!3m2!1ska!2sge!4v1626896038059!5m2!1ska!2sge" max-width="350" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-                <div class="col-8">
-                    <h1 style="font-size: 30px;font-weight: bold;">Batumi Hotels and Places to Stay</h1>
-                    <div class="mt-5 row">
+                <div class="col-xl-8 lg-cal">
+                    <h1 class="mob-tit font-weight-bold">Batumi Hotels and Places to Stay</h1>
+                    <div class="row mob-cal">
                         <div>
                             <button class="calendar">
                                 <label for="date">Check In</label>
@@ -156,13 +182,13 @@
                                 <input type="date" id="date" name="date">
                             </button>
                         </div>
-                        <div>
+                        <div >
                             <button onclick="visible()" class="calendar users" id="visible">
                                 <label for="date">Guests</label><br>
                                 <span>
-                                    <span>1 room</span>,
-                                    <span>2 adults</span>,
-                                    <span>0 children</span>                                  
+                                    <span>1 <span class="md-hidden sm-vis">room</span></span>,
+                                    <span>2 <span class="md-hidden sm-vis">adults</span></span>,
+                                    <span>0 <span class="md-hidden sm-vis">children</span></span>                                  
                                 </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people ml-4" viewBox="0 0 16 16">
                                     <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
@@ -219,12 +245,13 @@
 
         <!-- ///////////// section ////////////// -->
 
-          <section class="row pl-5 pr-3">
+          <section class="row pl-5 pr-3 container-fluid">
               
             <!--///////////// filter //////////// -->
 
-            <div class="col-3">
+            <div class="col-lg-3 lg-hidden">
               <div class="filter">
+                <!-- deals -->
                 <div>
                   <h3>Deals</h3><br>  
                   <input type="checkbox" id="deals" name="deals">
@@ -246,6 +273,7 @@
                   <label for="deals">Properties with special offers</label>
                 </div>
                 <hr>
+                <!-- price -->
                 <div>
                     <h3>Price</h3><br>
                       <div class="center"><span id="price">GEL <span id="from">0</span> +</span></div>
@@ -259,6 +287,7 @@
                       </div> 
                 </div>
                 <hr>
+                <!-- popular -->
                 <div>
                     <h3>Popular</h3>
                   <input type="checkbox" id="deals" name="deals">
@@ -282,7 +311,8 @@
                     </svg>  & up</label>
                 </div>
                 <hr>
-                <div class="types">
+                <!-- types -->
+                <div>
                     <h3>Property types</h3>
                   <input type="checkbox" id="deals" name="deals">
                   <label for="deals">B&Bs & Inns </label><br>
@@ -311,15 +341,13 @@
                   <span id="more">Show more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                       <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                     </svg></span>
-                    <span id="less">Show less <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-                      <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
-                    </svg></span>
-                  <p><br><a href="https://www.tripadvisor.com/VacationRentals-g297576-Reviews-Batumi_Adjara_Region-Vacation_Rentals.html" target="_blank">View Vacation Rentals</a>
+                  <p><br><a href="https://www.tripadvisor.com/VacationRentals-g297576-Reviews-Batumi_Adjara_Region-Vacation_Rentals.html" target="_blank" class="text-dark">View Vacation Rentals</a>
                       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                       <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
                     </svg></p>
                 </div>
                 <hr>
+                <!-- amenities -->
                 <div>
                     <h3>Amenities</h3>
                     <input type="checkbox" id="deals" name="deals">
@@ -333,10 +361,11 @@
                     <span id="all">Show all</span>
                 </div>
                 <hr>
+                <!-- distance -->
                 <div>
                     <h3>Distance from</h3>
                     <div class="center"><span id="mil">25</span> mi</div>
-                    <Input class="range" type="range"  value="25" min="0" max="25" onChange="rangeSlider(this.value)" onmousemove="rangeSlider(this.value)"></Input>
+                    <Input class="range" type="range"  value="25" min="1" max="25" onChange="rangeSlider(this.value)" onmousemove="rangeSlider(this.value)"></Input>
                     <br><br>
                     <form>
                       <input type="radio" id="deals" name="deals">
@@ -351,9 +380,7 @@
                   </form> 
                 </div>
                 <hr>
-  
-                <!-- /////////// rating //////////// -->
-  
+                <!-- rating -->
                 <div>
                     <h3>Traveler rating</h3>
                     <input type="radio" id="deals" name="deals">
@@ -410,6 +437,7 @@
                        </svg>  & up</label><br><br>
                 </div>
                 <hr>
+                <!-- class -->
                 <div>
                     <h3>Hotel class</h3>
                     <input type="checkbox" id="deals" name="deals">
@@ -422,6 +450,7 @@
                   <label for="deals">2 stars</label>
                 </div>
                 <hr>
+                <!-- style -->
                 <div>
                     <h3>Style</h3>
                     <input type="checkbox" id="deals" name="deals">
@@ -442,12 +471,10 @@
                   </div><br>
                     <span id="showMore">Show more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                       <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                    </svg></span>
-                    <span id="showLess">Show less <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-                      <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
-                    </svg></span>          
+                    </svg></span>         
                 </div>
                 <hr>
+                <!-- brands -->
                 <div>
                   <h3>Brands</h3>
                   <input type="checkbox" id="deals" name="deals">
@@ -464,11 +491,11 @@
             
             <!-- ////////////// cards /////////// -->
 
-            <div class="col-9 cards">
+            <div class="col-lg-9 cards">
 
               <div class="row mb-3">
-                <span class="col mt-2"> <span style="font-weight: bold;">1,410 properties</span> in Batumi</span>
-                <div class="col right">
+                <span class="col-lg-6 col-md-6 mt-2"> <span style="font-weight: bold;">1,410 properties</span> in Batumi</span>
+                <div class="col-lg-6 col-md-6 right md-hidden">
                   <span> 
                     Sort by: 
                     <select class="form-select" aria-label="Default select example" style="border:solid 1px rgb(201, 201, 201); padding: 5px; max-width: 250px; width: 100%;">
@@ -477,17 +504,21 @@
                       <option value="">Price (low to high)</option>
                       <option value="">Distance to city center </option>
                     </select>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <span data-bs-toggle="tooltip" data-bs-placement="right" title="Properties ranked using exclusive Tripadvisor data, including traveler ratings, confirmed availability from our partners, prices, booking popularity, location and personal user preferences.">
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                       <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
                     </svg>
+                    </span>
                   </span>
                 </div>
               </div>
+
+              <!-- 1 -->
                
-              <div class="card mb-3">
+              <div class="card  mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d3/ca/41/exterior.jpg?w=1100&h=-1&s=1" class="img-fluid rounded-start" alt="hilton">
                       <span class="badge bg-danger">Best Seller</span>
                       <button type="button" class="fav">
@@ -495,75 +526,86 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Hilton Batumi</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel">GEL 443</h6><br>
-                      <button class="cardButton" type="button">View deal</button>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg> <br>
-                        <span style="font-weight: bold;">GEL 444</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 443</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 444</span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#1 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
-                        <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z"/>
-                      </svg>
-                        Pool</span><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16">
-                        <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                      </svg>
-                        Special offer</span><br>
-                      <a class="text-dark" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=BUSBT&arrivalDate=2021-08-08&departureDate=2021-08-09&room1NumAdults=2&mc_id=zINDA0UK1XX2OLX3DA4MS5TripadvisorBL6BUSBTHI7_110561617&utm_source=tripadvisor&utm_medium=intlmeta&utm_campaign=business_listings&dclid=CjkKEQjwxo6IBhDOjPfNxPm_gtoBEiQAVkkgfgHuGjVvuarMHN_JccWFy8PUIZcawSm9SNaz8yaOsdvw_wcB">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
-                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-                        </svg>
-                          Visit hotel website <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Hilton Batumi</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                            <h6 class="gel">GEL 443</h6><br>
+                            <button class="cardButton" type="button">View deal</button>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                          </svg></span>
-                      </a>
-                    </div>
-                </div>
+                          </svg> <br>
+                          <span style="font-weight: bold;">GEL 444</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 443</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 444</span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#1 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
+                            <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z"/>
+                          </svg>
+                            Pool</span><br>
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16">
+                            <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                            Special offer</span><br>
+                          <a class="text-dark" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=BUSBT&arrivalDate=2021-08-08&departureDate=2021-08-09&room1NumAdults=2&mc_id=zINDA0UK1XX2OLX3DA4MS5TripadvisorBL6BUSBTHI7_110561617&utm_source=tripadvisor&utm_medium=intlmeta&utm_campaign=business_listings&dclid=CjkKEQjwxo6IBhDOjPfNxPm_gtoBEiQAVkkgfgHuGjVvuarMHN_JccWFy8PUIZcawSm9SNaz8yaOsdvw_wcB">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                            </svg>
+                              Visit hotel website <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                              </svg></span>
+                          </a>
+                        </div>
+                      </div>
+  
+                    </div>                
+                  </div>
               </div>
+
+              <!-- 2 -->
 
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a5/da/af/recreational-facilities.jpg?w=1200&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
                       <span class="badge bg-danger">Top Rated</span>
                       <button type="button" class="fav">
@@ -571,292 +613,332 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Sheraton Batumi Hotel</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel">GEL 578</h6><br>
-                      <button class="cardButton" type="button">View deal</button>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 577</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 484</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 578</span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#2 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
-                        <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z"/>
-                      </svg>
-                        Pool</span><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16">
-                        <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                      </svg>
-                        Special offer</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
-                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                          <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
-                        </svg>
-                          Free parking</span><br>
-                      <a class="text-dark" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=BUSBT&arrivalDate=2021-08-08&departureDate=2021-08-09&room1NumAdults=2&mc_id=zINDA0UK1XX2OLX3DA4MS5TripadvisorBL6BUSBTHI7_110561617&utm_source=tripadvisor&utm_medium=intlmeta&utm_campaign=business_listings&dclid=CjkKEQjwxo6IBhDOjPfNxPm_gtoBEiQAVkkgfgHuGjVvuarMHN_JccWFy8PUIZcawSm9SNaz8yaOsdvw_wcB">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
-                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-                        </svg>
-                          Visit hotel website <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Sheraton Batumi Hotel</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                            <h6 class="gel">GEL 578</h6><br>
+                            <button class="cardButton" type="button">View deal</button>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                          </svg></span>    
-                      </a>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 577</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 484</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 578</span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#2 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
+                            <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z"/>
+                          </svg>
+                            Pool</span><br>
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16">
+                            <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                            Special offer</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
+                            </svg>
+                              Free parking</span><br>
+                          <a class="text-dark" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=BUSBT&arrivalDate=2021-08-08&departureDate=2021-08-09&room1NumAdults=2&mc_id=zINDA0UK1XX2OLX3DA4MS5TripadvisorBL6BUSBTHI7_110561617&utm_source=tripadvisor&utm_medium=intlmeta&utm_campaign=business_listings&dclid=CjkKEQjwxo6IBhDOjPfNxPm_gtoBEiQAVkkgfgHuGjVvuarMHN_JccWFy8PUIZcawSm9SNaz8yaOsdvw_wcB">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                            </svg>
+                              Visit hotel website <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                              </svg></span>    
+                          </a>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
 
+              <!-- 3 -->
+
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
-                      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d2/fe/30/hotel-exterior.jpg?w=700&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
+                    <div class="col-lg-4 col-md-4">
+                      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d2/fe/30/hotel-exterior.jpg?w=700&h=-1&s=1" class="img-fluid rounded-start img3" alt="sheraton">
                       <button type="button" class="fav">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Radisson Blu Hotel Batumi</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel">GEL 261</h6><br>
-                      <button class="cardButton" type="button">View deal</button>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 247</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 234</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 247</span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#3 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
-                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                          <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
-                        </svg>
-                          Free parking</span><br>
-                      <a class="text-dark" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=BUSBT&arrivalDate=2021-08-08&departureDate=2021-08-09&room1NumAdults=2&mc_id=zINDA0UK1XX2OLX3DA4MS5TripadvisorBL6BUSBTHI7_110561617&utm_source=tripadvisor&utm_medium=intlmeta&utm_campaign=business_listings&dclid=CjkKEQjwxo6IBhDOjPfNxPm_gtoBEiQAVkkgfgHuGjVvuarMHN_JccWFy8PUIZcawSm9SNaz8yaOsdvw_wcB">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
-                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-                        </svg>
-                          Visit hotel website <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Radisson Blu Hotel Batumi</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                            <h6 class="gel">GEL 261</h6><br>
+                            <button class="cardButton" type="button">View deal</button>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                          </svg></span>    
-                      </a>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 247</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 234</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 247</span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#3 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
+                            </svg>
+                              Free parking</span><br>
+                          <a class="text-dark" href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=BUSBT&arrivalDate=2021-08-08&departureDate=2021-08-09&room1NumAdults=2&mc_id=zINDA0UK1XX2OLX3DA4MS5TripadvisorBL6BUSBTHI7_110561617&utm_source=tripadvisor&utm_medium=intlmeta&utm_campaign=business_listings&dclid=CjkKEQjwxo6IBhDOjPfNxPm_gtoBEiQAVkkgfgHuGjVvuarMHN_JccWFy8PUIZcawSm9SNaz8yaOsdvw_wcB">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                            </svg>
+                              Visit hotel website <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                              </svg></span>    
+                          </a>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
 
+              <!-- 4 -->
+
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/54/8f/a7/colosseum-marina-hotel.jpg?w=1200&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
                       <button type="button" class="fav">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Colosseum Marina Hotel</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel">GEL 364</h6><br>
-                      <button class="cardButton" type="button">View deal</button><br><br>
-                      <span style="font-size: 15px; font-weight: bold;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                        </svg>
-                        Free cancellation
-                      </span>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 350</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 342</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 355</span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#4 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
-                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                          <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
-                        </svg>
-                          Free parking</span><br>
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Colosseum Marina Hotel</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                           <h6 class="gel">GEL 364</h6><br>
+                           <button class="cardButton" type="button">View deal</button><br><br>
+                           <span style="font-size: 15px; font-weight: bold;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                          Free cancellation
+                        </span>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 350</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 342</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 355</span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#4 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
+                            </svg>
+                              Free parking</span><br>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
 
+              <!-- 5 -->
+
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/e7/62/d3/the-grand-gloria-hotel.jpg?w=1200&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
                       <button type="button" class="fav">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">The Grand Gloria Hotel</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel">GEL 410</h6><br>
-                      <button class="cardButton" type="button">View deal</button><br><br>
-                      <span style="font-size: 15px; font-weight: bold;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                        </svg>
-                        Free cancellation
-                      </span>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 414</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 404</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 415</span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#5 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
-                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                          <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
-                        </svg>
-                          Free parking</span><br>
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">The Grand Gloria Hotel</h5><br><br>
+                          <div class="card-price">
+                            <img  class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                          <h6 class="gel">GEL 410</h6><br>
+                          <button class="cardButton" type="button">View deal</button><br><br>
+                          <span style="font-size: 15px; font-weight: bold;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                          Free cancellation
+                        </span>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 414</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 404</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 415</span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#5 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
+                            </svg>
+                              Free parking</span><br>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
 
+              <!-- 6 -->
+
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a3/c3/3c/caption.jpg?w=1200&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
                       <span class="badge bg-dark">Breakfast included</span>
                       <button type="button" class="fav">
@@ -864,64 +946,74 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Divan Suites Batumi</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel">GEL 272</h6><br>
-                      <button class="cardButton" type="button">View deal</button><br><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 294</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 234</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 285</span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#6 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
-                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                          <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
-                        </svg>
-                          Free parking</span><br>
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Divan Suites Batumi</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                            <h6 class="gel">GEL 272</h6><br>
+                            <button class="cardButton" type="button">View deal</button><br><br>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 294</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 234</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 285</span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#6 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
+                            </svg>
+                              Free parking</span><br>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
 
+              <!-- 7 -->
+
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/38/2d/8f/hotel-old-town.jpg?w=1200&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
                       <span class="badge bg-dark">Breakfast included</span>
                       <button type="button" class="fav">
@@ -929,74 +1021,84 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Hotel Old Town</h5><br><br>
-                        <img width="100px"  src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                        <h6 class="gel" style="color: red; text-decoration: line-through;">GEL 169</h6><br>
-                        <h6 class="gel">GEL 137</h6><br>
-                      <button class="cardButton" type="button">View deal</button><br><br>
-                      <span style="font-size: 15px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                        </svg>
-                        Reserve now, pay at stay
-                      </span>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 294</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 234</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                          <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
-                        </svg></span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#7 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
-                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                          <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
-                        </svg>
-                          Free parking</span><br>
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Hotel Old Town</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px"  src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                            <h6 class="gel" style="color: red; text-decoration: line-through;">GEL 169</h6><br>
+                            <h6 class="gel">GEL 137</h6><br>
+                          <button class="cardButton" type="button">View deal</button><br><br>
+                          <span style="font-size: 15px;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                          Reserve now, pay at stay 
+                        </span><br><br>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 294</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 234</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                          </svg></span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#7 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
+                            </svg>
+                              Free parking</span><br>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
 
+              <!-- 8 -->
+
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/6e/45/57/exterior.jpg?w=1200&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
                       <span class="badge bg-dark">Breakfast included</span>
                       <button type="button" class="fav">
@@ -1004,64 +1106,74 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Wyndham Batumi</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel">GEL 247</h6><br>
-                      <button class="cardButton" type="button">View deal</button><br><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 246</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 231</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 247</span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#8 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
-                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                          <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
-                        </svg>
-                          Free parking</span><br>
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Wyndham Batumi</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                            <h6 class="gel">GEL 247</h6><br>
+                            <button class="cardButton" type="button">View deal</button><br><br>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 246</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 231</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 247</span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#8 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
+                            </svg>
+                              Free parking</span><br>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
 
+              <!-- 9 -->
+
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/ca/82/69/euphoria-hotel.jpg?w=1200&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
                       <span class="badge bg-dark">Breakfast included</span>
                       <button type="button" class="fav">
@@ -1069,130 +1181,148 @@
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Hotel Old Town</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                        <h6 class="gel" style="color: red; text-decoration: line-through;">GEL 201</h6><br>
-                        <h6 class="gel">GEL 183</h6><br>
-                      <button class="cardButton" type="button">View deal</button><br><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 183</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">GEL 197</span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">201</span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#9 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
-                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                          <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
-                        </svg>
-                          Free parking</span><br>
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Hotel Old Town</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                             <h6 class="gel" style="color: red; text-decoration: line-through;">GEL 201</h6><br>
+                             <h6 class="gel">GEL 183</h6><br>
+                           <button class="cardButton" type="button">View deal</button><br><br>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Booking.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 183</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">GEL 197</span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">201</span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#9 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-ppt" viewBox="0 0 16 16">
+                              <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                              <path d="M6 5a1 1 0 0 1 1-1h1.188a2.75 2.75 0 0 1 0 5.5H7v2a.5.5 0 0 1-1 0V5zm1 3.5h1.188a1.75 1.75 0 1 0 0-3.5H7v3.5z"/>
+                            </svg>
+                              Free parking</span><br>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
 
+              <!-- 10 -->
+
               <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-lg-4 col-md-4">
                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/5e/3c/cf/grand-royal-hotel.jpg?w=800&h=-1&s=1" class="img-fluid rounded-start" alt="sheraton">
                       <button type="button" class="fav">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></button>
                     </div>
-                    <div class="col center">
-                      <h5 class="card-title pt-3">Grand Royal Hotel</h5><br><br>
-                        <img width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
-                      <h6 class="gel">GEL 86</h6><br>
-                      <button class="cardButton" type="button">View deal</button><br><br>
-                      <span style="font-size: 15px; font-weight: bold;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                          <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
-                        </svg>
-                        Free cancellation
-                      </span>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col-2 pt-5">
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
-                          </svg></span></a></p><br>
-                      <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                        </svg><br>
-                        <span style="font-weight: bold;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
-                          </svg></span></a></p><br>
-                    </div>
-                    <hr class="vertical">
-                    <div class="col card4 pt-5 pb-5">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
-                          <circle cx="8" cy="8" r="8"/>
-                        </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-                        </svg>
-                        <span>877 reviews</span><br><br><br>
-                      </span>
-                      <span>#10 Best Value of 20 places <br> to stay in Batumi</span><br><br><br>
-                      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-                        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                      </svg>
-                        Free Wifi</span><br>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
-                          <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z"/>
-                        </svg>
-                          Pool</span><br>
+                    <div class="col-lg-8 col-md-8 row">
+                      <div class="col-md-4 center">
+                        <h5 class="card-title pt-3">Grand Royal Hotel</h5><br><br>
+                          <div class="card-price">
+                            <img class="md-hidden" width="100px" src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&amp;siteid=1&amp;2" alt="expedia logo"><br><br>
+                            <h6 class="gel">GEL 86</h6><br>
+                            <button class="cardButton" type="button">View deal</button><br><br>
+                            <span style="font-size: 15px; font-weight: bold;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                          </svg>
+                          Free cancellation
+                        </span>
+                          </div>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-3 pt-5 md-hidden">
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Hotels.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                              <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                            </svg></span></a></p><br>
+                        <p style="text-align: center;"><a class="text-dark" style="font-size: 13px;" href="#">Expedia.com 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg><br>
+                          <span style="font-weight: bold;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                              <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                            </svg></span></a></p><br>
+                      </div>
+                      <hr class="vertical md-hidden">
+                      <div class="col-md-4 card4 pt-5 pb-5">
+                        <div class="card1">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16"  height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8"/>
+                            </svg> <svg xmlns="http://www.w3.org/2000/svg" color="rgb(1, 168, 57)" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                            </svg>
+                            <span>877 reviews</span><br><br><br>
+                          </span>
+                          <span>#10 Best Value of 20 places <br> to stay in Batumi</span>
+                        </div><br><br><br>
+                        <div class="card2">
+                          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+                            <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                            <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                          </svg>
+                            Free Wifi</span><br>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
+                              <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z"/>
+                            </svg>
+                              Pool</span><br>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
@@ -1206,17 +1336,17 @@
               </div>
 
               <div style="background-color: white; padding: 20px; border: solid 1px rgb(201, 201, 201); margin-top: 20px;">
-                <nav aria-label="Page navigation example" >
+                <nav class="pgn" aria-label="Page navigation example" >
                   <ul class="pagination justify-content-center" >
                     <li class="page-item disabled" >
                       <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                     </li>
                     <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
                     <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link text-dark " href="#">3</a></li>
+                    <li class="page-item"><a class="page-link text-dark sm-hidden" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link text-dark sm-hidden" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link text-dark sm-hidden" href="#">6</a></li>
                     <li class="page-item">
                       <a class="page-link text-dark" href="#">Next</a>
                     </li>
@@ -1260,11 +1390,11 @@
 
           <footer style="background-color: rgba(240, 215, 215, 0.692); margin-top: 20px;">
 
-           <div class="container p-4">
-            <div class="row">
-              <div class="col row">
-                <div class="col-1"><img src="img/favicon.ico" alt=""></div>
-              <div class="col">
+           <div class="container p-4 md-footer">
+            <div class="row footerP">
+              <div class="col-lg-9 col-md-9 row">
+                <div class="col-lg-1 col-md-2 col-sm-2"><img src="img/favicon.ico" alt=""></div>
+              <div class="col-lg-11 col-md-10 col-sm-10 f-p">
                 <p><span style="font-size: 15px; font-weight: bold;">© </span> 2021 TripAdvisor LLC All rights reserved.</p><br>
                 <div>
                   <span><a href="" class="text-dark" style="text-decoration: underline; font-weight: bold; font-size: 15px; margin-right: 10px;">Terms of Use</a></span>
@@ -1284,7 +1414,7 @@
                   TripAdvisor LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.</p>
               </div>
               </div>
-              <div class="col-3 footerDrop">
+              <div class="col-lg-3 col-md-3 center footerDrop">
                 <div>
                   <button>
                      GEL

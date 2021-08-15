@@ -13,33 +13,18 @@ $(document).ready(function(){
 
   $(document).ready(function(){
     $("#more").click(function(){
-      $("#hide").show();
-        $("#more").replaceWith( $( "#less" ));
-        $("#less").show();     
+      $("#hide").toggle();   
     });
   });
 
-  $(document).ready(function(){
-    $("#less").click(function(){
-      $("#hide").hide();
-      $("#less").replaceWith( $( "#more" ));      
-    });
-  });
 
   $(document).ready(function(){
     $("#showMore").click(function(){
-      $("#hideBox").show();
-        $("#showMore").replaceWith( $( "#showLess" ));
-        $("#showLess").show();     
+      $("#hideBox").toggle();    
     });
   });
 
-  $(document).ready(function(){
-    $("#showLess").click(function(){
-      $("#hideBox").hide();
-      $("#showLess").replaceWith( $( "#showMore" ));      
-    });
-  });
+
 
 
 // /////////// footer ////////
