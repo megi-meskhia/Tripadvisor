@@ -291,10 +291,10 @@ input[type="number"] {
   width: 30px; 
   height: 30px; 
   color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.527); 
+  background-color: rgba(255, 255, 255, 0.356); 
   position: absolute; 
   margin-top: 10px;
-  right: 0px;
+  right: 5px;
 }
 .fav:hover{
   color: rgb(240, 42, 42);
