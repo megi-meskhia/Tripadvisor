@@ -49,23 +49,91 @@
                 </nav>
             </div>
 
-            <!-- mobile nav -->
+            <!-- offcanvas -->
+
+            <div id="offcanvas" class="offcanvas border mb-5">
+
+              <div>
+                <button type="button" class="close p-2" id="closed" style="font-size: 30px;" data-dismiss="modal">&times;</button>
+              </div>
+
+              <div class="center mt-5">
+                <button type="button" style="width: 150px;" class="btn rounded-pill btn-dark font-weight-bold">Sing in</button>
+              </div>
+
+              <div class="p-3">
+                <p>
+                  <button type="button" class="btn rounded-pill text-dark btn-bg font-weight-bold">
+                    <span class=" ">Review</span></button>
+                </p>
+              <p>
+                <button type="button" class="btn btn-link rounded-pill text-dark btn-bg font-weight-bold">
+                  <span class=" ">Trips</span></button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-link rounded-pill text-dark btn-bg font-weight-bold">
+                  <span class=" ">Alerts</span></button>
+              </p>
+              </div>
+
+                <hr>
+
+                <ul class="p-3">
+                  <li><a class="nav-link text-dark" href="#">Hotels</a></li>
+                  <li><a class="nav-link text-dark" href="#">Things to Do</a></li>
+                  <li><a class="nav-link text-dark" href="#">Restaurants</a></li>
+                  <li><a class="nav-link text-dark" href="#">Flights</a></li>
+                  <li><a class="nav-link text-dark" href="#">Vacation Rentals</a></li>
+                  <li><a class="nav-link text-dark" href="#">Shopping</a></li>
+                  <li><a class="nav-link text-dark" href="#">Cruises</a></li>
+                  <li><a class="nav-link text-dark" href="#">Rental cars</a></li>
+                  <li><a class="nav-link text-dark" href="#">Hotels</a></li>
+                  <li><a class="nav-link text-dark" href="#">Things to Do</a></li>
+                  <li><a class="nav-link text-dark" href="#">Restaurants</a></li>
+                  <li><a class="nav-link text-dark" href="#">Flights</a></li>
+                  <li><a class="nav-link text-dark" href="#">Vacation Rentals</a></li>
+                  <li><a class="nav-link text-dark" href="#">Shopping</a></li>
+                  <li><a class="nav-link text-dark" href="#">Cruises</a></li>
+                  <li><a class="nav-link text-dark" href="#">Rental cars</a></li>
+                </ul>
+
+            </div>
+
+            <!-- mob search -->
+
+            <div id="mobSearch" class="mobSearch p-3">
+
+              <svg xmlns="http://www.w3.org/2000/svg" id="arrow" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              </svg>
+
+              <input class="form-control-sm border-0 center" style="width: 80%;" type="text" placeholder="Search" aria-label="Search">
+
+              <i class="fa fa-search" aria-hidden="true" style="font-size: 20px;"></i>
+
+              <hr style="height:2px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);margin-top: 10px;">
+
+            </div>
+
+            <!-- mob menu -->
 
             <div class="container mob-nav">
               <nav class="row p-2">
                 <div class="align-self-center col-2">
-                  <button style="border: solid 0px; background-color: white;" class=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-border-width" viewBox="0 0 16 16">
+                  <button id="mobMenu" style="border: none; background-color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-border-width" viewBox="0 0 16 16">
                     <path d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-2zm0 5A.5.5 0 0 1 .5 8h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
                   </svg></button>
                 </div>
                 <div class="col-8 center">
                   <a href=""><img style="max-width: 200px; width: 100%;" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="tripadvisor"></a>
                 </div>
-                <div class="align-self-center col-2 right">
-                  <button style="border: solid 0px; background-color: white; font-size: 20px; "><i class="fa fa-search" aria-hidden="true"></i></button>
+                <div class="align-self-center col-2">
+                  <button id="mobS" style="border: none; background-color: white; font-size: 20px; "><i class="fa fa-search" aria-hidden="true"></i></button>
                 </div>
               </nav>
             </div>
+
+            
 
             <!-- ///////////// Lists ///////////// -->
 
@@ -188,7 +256,7 @@
                                 <span>
                                     <span>1 <span class="md-hidden sm-vis">room</span></span>,
                                     <span>2 <span class="md-hidden sm-vis">adults</span></span>,
-                                    <span>0 <span class="md-hidden sm-vis">children</span></span>                                  
+                                    <span>0 <span class="md-hidden">children</span></span>                                  
                                 </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people ml-4" viewBox="0 0 16 16">
                                     <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>

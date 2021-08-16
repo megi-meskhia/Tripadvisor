@@ -24,7 +24,31 @@ $(document).ready(function(){
     });
   });
 
+  // /////// offcanvas /////////
 
+  $(document).ready(function(){
+    $("#mobMenu").click(function(){
+      $("#offcanvas").show();
+    });
+  });
+
+  $(document).ready(function(){
+    $("#closed").click(function(){
+      $("#offcanvas").hide();
+    });
+  });
+
+  $(document).ready(function(){
+    $("#mobS").click(function(){
+      $("#mobSearch").show();
+    });
+  });
+
+  $(document).ready(function(){
+    $("#arrow").click(function(){
+      $("#mobSearch").hide();
+    });
+  });
 
 
 // /////////// footer ////////

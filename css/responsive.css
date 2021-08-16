@@ -76,9 +76,8 @@
     }
     .calendar {
        margin-top: 10px;
-       max-width: 300px;
+       width: 200px;
        font-size: 12px;
-       height: 45px;
     }
     .lg-cal {
         margin-top: 20px;
@@ -105,5 +104,8 @@
     }
     .mob-cal {
         justify-content: center;
+    }
+    #guests {
+        font-size: 14px;
     }
 }
