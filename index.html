@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <title>Tripadvisor</title>
+    <link rel="icon" href="css/favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/jq.js"></script>
+    <script src="jq.js"></script>
 </head>
 <body>
        <header>
@@ -41,8 +41,7 @@
                             <i class="fa fa-heart-o font-weight-bold"></i> <span class="navT ">Trips</span></button>
                         <button type="button" class="btn btn-link rounded-pill text-dark btn-bg font-weight-bold">
                             <i class="fa fa-bell-o font-weight-bold"></i> <span class="navT ">Alerts</span></button>
-                        <a href="https://www.tripadvisor.com/RegistrationController?flow=sign_up_and_save&returnTo=%2FHotels-g297576-Batumi_Adjara_Region-Hotels.html&fullscreen=true&flowOrigin=login&hideNavigation=true">
-                            <button type="button" class="btn rounded-pill btn-dark ml-3 font-weight-bold">Sing in</button> </a>                        
+                        <button type="button" class="btn rounded-pill btn-dark ml-3 font-weight-bold">Sing in</button>                        
 
                         </div>                    
                       </div>
@@ -251,7 +250,7 @@
                             </button>
                         </div>
                         <div >
-                            <button onclick="visible()" class="calendar users" id="visible">
+                            <button class="calendar users" id="visible">
                                 <label for="date">Guests</label><br>
                                 <span>
                                     <span>1 <span class="md-hidden sm-vis">room</span></span>,
@@ -276,9 +275,9 @@
                                               <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1h8zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                                             </svg> Rooms</span>
                                         <div class="input-group col-7">
-                                          <input type="button" value="-" class="button-minus" data-field="quantity">
-                                          <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
-                                          <input type="button" value="+" class="button-plus" data-field="quantity">
+                                          <input type="button" value="-" class="steps button-minus" data-quantity="minus" data-field="quantity">
+                                          <input type="number" step="1" max="10" value="0" name="quantity" class="quantity-field">
+                                          <input type="button" value="+" class="steps button-plus" data-quantity="plus" data-field="quantity">
                                         </div>
                                         </span>
                                       <span class="row p-3">                                    
@@ -289,17 +288,17 @@
                                               <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                                             </svg> Adults</span>
                                             <div class="input-group col-7">
-                                              <input type="button" value="-" class="button-minus" data-field="quantity">
-                                              <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
-                                              <input type="button" value="+" class="button-plus" data-field="quantity">
+                                              <input type="button" value="-" class="steps button-minus" data-quantity="minus" data-field="quantity1">
+                                              <input type="number" step="1" max="10" value="0" name="quantity1" class="quantity-field">
+                                              <input type="button" value="+" class="steps button-plus" data-quantity="plus" data-field="quantity1">
                                             </div>
                                       </span>
                                       <span class="row p-3">                                  
                                           <span class="col-5 "><i class="fa fa-child" style="font-size:24px"></i> Children</span>
                                           <div class="input-group col-7">
-                                              <input type="button" value="-" class="button-minus" data-field="quantity">
-                                              <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
-                                              <input type="button" value="+" class="button-plus" data-field="quantity">
+                                              <input type="button" value="-" class="steps button-minus" data-quantity="minus" data-field="quantity2">
+                                              <input type="number" step="1" max="10" value="0" name="quantity2" class="quantity-field">
+                                              <input type="button" value="+" class="steps button-plus" data-quantity="plus" data-field="quantity2">
                                             </div>
                                       </span>
                                       <div style="text-align: center; padding: 10px;"><button type="button" style="width: 250px; " class="btn btn-dark">Update</button></div>
@@ -852,7 +851,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg></span>
-                    </div>span
+                    </div>
                     <div class="col-lg-8 col-md-8 row">
                       <div class="col-md-4 center">
                         <h5 class="card-title pt-3">Colosseum Marina Hotel</h5><br><br>
@@ -1461,7 +1460,7 @@
            <div class="container p-4 md-footer">
             <div class="row footerP">
               <div class="col-lg-9 col-md-9 row">
-                <div class="col-lg-1 col-md-2 col-sm-2"><img src="img/favicon.ico" alt=""></div>
+                <div class="col-lg-1 col-md-2 col-sm-2"><img src="css/favicon.ico" alt=""></div>
               <div class="col-lg-11 col-md-10 col-sm-10 f-p">
                 <p><span style="font-size: 15px; font-weight: bold;">© </span> 2021 TripAdvisor LLC All rights reserved.</p><br>
                 <div>
